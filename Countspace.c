@@ -2,13 +2,13 @@
 #include<string.h>
 int main(void)
 {
-    char a[100];
+    char str[100];
     int n,i,count=0;
 	printf("\nEnter the sentence : ");
-	scanf("%[^\n]%*c",a);
+	scanf("%[^\n]%*c",str);
 	for(i=0;a[i]!='\0';i++)
 	{
-		if(a[i]==' ')
+		if(str[i]==' ')
 		{
 			count++;
 		}
