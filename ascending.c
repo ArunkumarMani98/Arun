@@ -2,7 +2,7 @@
 
 int main()
 {
-	int a[100],i,j,n,temp;
+	int a[100],i,j,n,temp,b[100],count=0;
 	printf("\nEnter the number of value");
 	scanf("%d",&n);
 	printf("\nEnter the values");
@@ -10,7 +10,10 @@ int main()
 	{
 		scanf("%d",&a[i]);
 	}
-	printf("\nThe ascending order is ..");
+	for(i=0;i<n;i++)
+	{
+		b[i]=a[i];
+	}
 	for(i=0;i<n;i++)
 	{
 		for(j=i+1;j<n;j++)
@@ -23,9 +26,13 @@ int main()
 		 }
 		}
 	}
-		for(i=0;i<n;i++)
+		for(i=0,j=n-1;i<n&&j>=0;i++,j--)
 		{
-			printf("\n%d\n",a[i]);
+			if(a[i]!=b[i])
+			{
+				count++;
+			}
 		}
+		printf("\nThere are %d changes .",count);
 	return 0;
 }
