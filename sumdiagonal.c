@@ -2,7 +2,7 @@
 
 int main(void) 
 {
-	int m,n,a[100][100],i,j,sum=0;
+	int m,n,a[100][100],i,j,sum=0,sum1=0,pro;
 	printf("\nEnter the row size : ");
 	scanf("%d",&m);
 	printf("\nEnter the column size : ");
@@ -23,8 +23,14 @@ int main(void)
 			{
 				sum=sum+a[i][j];
 			}
+			else
+			{
+				sum1=sum1+a[i][j];
+			}
 		}
 	}
-	printf("\nThe sum is %d.",sum);
+	pro=sum*sum1;
+	printf("\nThe sum of product of diagonal is %d.",pro);
 	return 0;
 }
+
