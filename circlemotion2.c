@@ -5,12 +5,14 @@ int main(void)
 	char a[100];
 	printf("\nEnter the string : ");
 	scanf("%s",&a);
+	if(strlen(a)>=8)
+	{
 	for(i=0;a[i]!='\0';i++)
 	{
 		if(a[i]=='L')
 		{
 			c--;
-			if(c==0||c==4||c==-4)
+			if(c==4||c==-4)
 			{
 				printf("\n%d rotations completed.",j);
 				j++;
@@ -21,7 +23,7 @@ int main(void)
 		else if(a[i]=='R')
 		{
 			c++;
-			if(c==0||c==4||c==-4)
+			if(c==4||c==-4)
 			{
 				printf("\n%d rotations completed.",j);
 				j++;
@@ -29,6 +31,7 @@ int main(void)
 				check++;
 			}
 		}
+	}
 	}
 	if(check>0)
 	{
