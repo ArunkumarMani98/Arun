@@ -1,15 +1,13 @@
 #include<stdio.h>
-#include<conio.h>
 #include<string.h>
-void main()
+int main()
 {
 char a[100],b=')',c='(';
-int i,n,d=0,e=0;
-clrscr();
+int i,n,s=1;
 printf("\nEnter the string : ");
 gets(a);
 n=strlen(a);
-if(a[0]==b&&a[n-1]=='(')
+if(a[0]==b&&a[n-1]==c)
 {
 printf("\n%s is invalid.",a);
 }
@@ -19,22 +17,26 @@ for(i=0;a[i]!='\0';i++)
 {
 if(a[i]==c)
 {
-d=d+1;
+	s=s+1;
 }
 else if(a[i]==b)
 {
-e=e+1;
+	s=s-1;
 }
-}
-if(d==e)
+if(s<=0)
 {
-printf("\n%s is valid.",a);
+	printf("\n%s is Invalid.",a);
+	break;
 }
-else
+}
+}
+if(s==1)
 {
-printf("\n%s is invalid.",a);
+	printf("\n%s is valid.",a);
 }
+else if(s>1)
+{
+	printf("\n%s is invalid.",a);
 }
-getch();
+return 0;
 }
-
