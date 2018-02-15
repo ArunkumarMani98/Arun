@@ -2,11 +2,11 @@
 int main()
 {
 	int a[100][100],m,n,i,j,c=0;
-	printf("\nEnter the row size : ");
+	printf("\nenter the row size : ");
 	scanf("%d",&m);
 	printf("\nenter the column size : ");
 	scanf("%d",&n);
-	printf("\nEnter the array elements : ");
+	printf("\nenter the array elements : ");
 	for(i=1;i<=m;i++)
 	{
 		for(j=1;j<=n;j++)
