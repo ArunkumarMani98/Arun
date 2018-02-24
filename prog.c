@@ -13,15 +13,18 @@ int main(void)
 		{
 			if(i+j==pp&&i*j==a)
 			{
-				printf("\nYes!!!");
-				c+=1;
+				c=1;
 				break;
 			}
 		}
 	}
-	if(c==0)
+	if(c==1)
 	{
-		printf("\nNo!!!");
+		printf("\nYES!!!");
+	}
+	else if(c==0)
+	{
+		printf("\nNO!!!");
 	}
 	return 0;
 }
