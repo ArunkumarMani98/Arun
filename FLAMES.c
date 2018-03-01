@@ -89,7 +89,7 @@ printf("\n%s and %s are FRIENDS!!!",s1,s2);
 }
 else if(a[0]=='L')
 {
-printf("\m%s and %s are LOVERS!!!",s1,s2);
+printf("\n%s and %s are LOVERS!!!",s1,s2);
 }
 else if(a[0]=='A')
 {
